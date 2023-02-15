@@ -1,10 +1,10 @@
-uniform float time;
-uniform float progress;
-uniform sampler2D texture1;
-uniform vec4 resolution;
 varying vec2 vUv;
+// uniform sampler2D uTexture;
+// uniform float uTime;
+
 
 void main() {
-    
-    gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
+  // vec4 texture = texture2D(uTexture, vUv);
+  
+  gl_FragColor = vec4(vUv, 1.0, 1.0);
 }
