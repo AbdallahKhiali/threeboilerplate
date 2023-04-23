@@ -1,5 +1,5 @@
 import * as THREE from 'three' // ThreeJS
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls' // Orbit controls
+// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls' // Orbit controls
 // import * as dat from 'dat.gui' // Interface controller
 // import gsap from 'gsap' // Animation library
 // import image from './image.jpg' // Texture
@@ -34,15 +34,15 @@ camera.position.set(0, 0, 2)
 // camera.position.set(0, 0, 2)
 
 /** Setup a camera controller */
-const controls = new OrbitControls(camera, renderer.domElement)
-controls.enableDamping = true
-controls.dampingFactor = 0.05
+// const controls = new OrbitControls(camera, renderer.domElement)
+// controls.enableDamping = true
+// controls.dampingFactor = 0.05
 
 /** Setup a scene */
 const scene = new THREE.Scene()
 
 /** Generate a plane geometry */
-const geometry = new THREE.PlaneGeometry(1, 1, 32, 32)
+const geometry = new THREE.PlaneGeometry(4, 2, 128, 128)
 /** Generate a sphere geometry */
 // const geometry = new THREE.SphereGeometry(1, 32, 32)
 
@@ -127,6 +127,6 @@ void function animate() {
   // material.uniforms.uMouse.value.x += (data.mouse.x - material.uniforms.uMouse.value.x) * data.mouse.k
   // material.uniforms.uMouse.value.y += (data.mouse.y - material.uniforms.uMouse.value.y) * data.mouse.k
 
-  controls.update()
+  // controls.update()
   renderer.render(scene, camera)
 }()
